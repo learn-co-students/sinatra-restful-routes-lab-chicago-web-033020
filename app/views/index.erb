@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Recipes Webapp</title>
+    </head>
+    <body>
+        <h1>All Recipes:</h1>
+
+        <% @recipes.each do |recipe| %>
+            <a href="/recipes/<%= recipe.id %>">
+                <h1> <%= recipe.name %> </h1>
+            </a>
+            <h2> <%= recipe.ingredients %> </h2>
+            <h3> <%= recipe.cook_time %> </h3>
+        <% end %>
+    </body>
+</html>
